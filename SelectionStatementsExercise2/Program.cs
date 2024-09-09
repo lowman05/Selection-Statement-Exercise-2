@@ -4,31 +4,37 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What is your favorite school subject?(please capitalize first letter)");
-            string mySubject = Console.ReadLine();
+            FavSubject();
+        }
+
+        public static void FavSubject()
+        {
+            Console.WriteLine("What is your favorite school subject?");
+            var mySubject = Console.ReadLine();
 
 
-            switch (mySubject)
+            switch (mySubject.ToLower())
             {
-                case "Geometry":
+                case "geometry":
                     Console.WriteLine($"{mySubject} is my favorite subject too!");
                     break;
-                case "Calculus":
+                case "calculus":
                     Console.WriteLine($"{mySubject} is my favorite subject too!");
                     break;
-                case "Statistics":
+                case "statistics":
                     Console.WriteLine($"{mySubject} is my favorite subject too!");
                     break;
-                case "History":
+                case "history":
                     Console.WriteLine($"{mySubject} is my favorite subject too!");
                     break;
-                case "Biology":
+                case "biology":
                     Console.WriteLine($"{mySubject} is my favorite subject too!");
                     break;
                 default:
                     Console.WriteLine("We must have missed that one.");
                     break;
             }
-            }
+
+        }
     }
 }
